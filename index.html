@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Media Site — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">My Media Site</a>
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Welcome 👋</h1>
+    <p>This simple site demonstrates:</p>
+    <ul>
+      <li>Two pages with a shared navigation menu</li>
+      <li>Two local audio files (on the Media page)</li>
+      <li>Two local video files (on the Media page)</li>
+      <li>Custom CSS styling</li>
+    </ul>
+
+    <section class="card">
+      <h2>Summary</h2>
+      <ol>
+        <li>I created a website</li>
+        <li>I placed audio and video files in the repository</li>
+        <li>I published the repository</li>
+        <li>TADA lab done</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> My Media Site</p>
+  </footer>
+
+  <script>
+    // Tiny enhancement: current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

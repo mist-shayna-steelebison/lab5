@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Media Site — Media</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">My Media Site</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html" aria-current="page">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Media</h1>
+
+    <section class="card">
+      <h2>Audio (local files)</h2>
+      <p class="muted">Both files are served from <code>/media/</code> in the same project.</p>
+
+      <figure class="media-block">
+        <figcaption>Song 1 (M4a)</figcaption>
+        <audio controls preload="metadata">
+          <source src="media/song1.m4a" type="audio/m4a" />
+          Your browser does not support the audio element.
+        </audio>
+      </figure>
+
+      <figure class="media-block">
+        <figcaption>Song 2 (m4a)</figcaption>
+        <audio controls preload="metadata">
+          <source src="media/song2.m4a" type="audio/m4a" />
+          Your browser does not support the audio element.
+        </audio>
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2>Video (local files)</h2>
+      <p class="muted">Both videos are stored locally in <code>/media/</code> (same server as this page).</p>
+
+      <figure class="media-block">
+        <figcaption>Clip 1 (MP4)</figcaption>
+        <video controls preload="metadata" width="640" poster="media/poster1.jpg">
+          <source src="media/clip1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </figure>
+
+      <figure class="media-block">
+        <figcaption>Clip 2 (WebM)</figcaption>
+        <video controls preload="metadata" width="640" poster="media/poster2.jpg">
+          <source src="media/clip2.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </figure>
+
+      <details class="tip">
+        <summary>Why two formats?</summary>
+        <p>Different browsers prefer different codecs. Including MP4 and WebM improves compatibility. You can use just MP4 for many cases, but two formats is more robust.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> My Media Site</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
